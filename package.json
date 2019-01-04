@@ -1,7 +1,7 @@
 {
     "name": "insomnia-plugin-random-cpf",
     "description": "Generate random CPFs inside the Insomnia REST client",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "main": "randomCPF.js",
     "insomnia": {
       "name": "randomCPF",

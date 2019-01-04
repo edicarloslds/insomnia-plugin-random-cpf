@@ -23,8 +23,15 @@ module.exports.templateTags = [{
     name: 'randocpf',
     displayName: 'Random CPF',
     description: 'Generate a random cpf',
-    args: [],
-    async run (context) {        
+    args: [
+        {
+            displayName: 'Show punctuation',
+            description: 'Display numbers with punctuation',
+            type: 'boolean',
+            defaultValue: false
+        },
+    ],
+    async run (context, punctuation) {        
         const numb1 = random();
         const numb2 = random();
         const numb3 = random();
@@ -32,6 +39,6 @@ module.exports.templateTags = [{
         const dig1 = digits(numb1, numb2, numb3);
         const dig2 = digits(numb1, numb2, numb3, dig1);
 
-        return `${numb1}.${numb2}.${numb3}-${dig1}${dig2}`;
+        return punctuation ? `${numb1}.${numb2}.${numb3}-${dig1}${dig2}` : `${numb1}${numb2}${numb3}${dig1}${dig2}`;
     }
 }];
