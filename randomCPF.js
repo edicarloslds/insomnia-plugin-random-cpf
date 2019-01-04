@@ -39,6 +39,9 @@ module.exports.templateTags = [{
         const dig1 = digits(numb1, numb2, numb3);
         const dig2 = digits(numb1, numb2, numb3, dig1);
 
-        return punctuation ? `${numb1}.${numb2}.${numb3}-${dig1}${dig2}` : `${numb1}${numb2}${numb3}${dig1}${dig2}`;
+        let cpf = `${numb1}${numb2}${numb3}${dig1}${dig2}`
+        let cpfPunctuation = `${numb1}.${numb2}.${numb3}-${dig1}${dig2}`;
+
+        return punctuation ? cpfPunctuation : cpf;
     }
 }];
