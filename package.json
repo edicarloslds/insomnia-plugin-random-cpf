@@ -1,0 +1,22 @@
+{
+    "name": "insomnia-plugin-random-cpf",
+    "description": "Generate random CPFs inside the Insomnia REST client",
+    "version": "1.0.0",
+    "main": "randomCPF.js",
+    "insomnia": {
+      "name": "randomCPF",
+      "description": "Generate a random cpf number"
+    },
+    "repository": "https://github.com/edicarloslds/insomnia-plugin-random-cpf",
+    "dependencies": [],
+    "devDependencies": [],
+    "keywords": [
+      "insomnia",
+      "plugin",
+      "plugins",
+      "random",
+      "cpf",
+      "generator"
+    ]
+  }
+  
